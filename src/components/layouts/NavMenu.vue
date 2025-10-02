@@ -38,7 +38,7 @@ const selectedStyle = (routeName:string) => {
 
 const buttons = [
     { label: "Home", icon: "tabler:home", route: "home" },
-    { label: "Map", icon: "tabler:map", route: "map" },
+    // { label: "Map", icon: "tabler:map", route: "map" },
     { label: "Profile", icon: "tabler:user", route: "profile" },
 ];
 </script>

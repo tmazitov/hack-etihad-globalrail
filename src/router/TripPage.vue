@@ -40,7 +40,7 @@
 
             <div class="border border-gray-300 rounded-lg mb-4 bg-white  relative">
 
-                <div class="text-lg p-4 pt-3 font-medium">4th car</div>
+                <div class="text-lg p-4 pt-3 font-medium">4th carriage</div>
 
                 <div class="grid grid-flow-col grid-rows-2 gap-x-2.5 w-full gap-y-6 px-4 mb-4 pt-0 relative">
                     <div 

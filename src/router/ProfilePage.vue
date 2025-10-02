@@ -33,12 +33,18 @@ import plans from "@/data/plans";
 
 const router = useRouter();
 
+const logoutHandler = () => {
+    localStorage.removeItem('selectedPlan');
+    localStorage.removeItem('shuttleBooked')
+    router.push({ name: 'welcome' })
+}
+
 const settings = [
     { icon: 'tabler:id', lable: 'Update Plan' , click: () => { router.push({ name: 'plans' }) } },
     { icon: 'tabler:user', lable: 'Personal Information' },
     { icon: 'tabler:settings', lable: 'Account Settings' },
     { icon: 'tabler:help-circle', lable: 'Help & Support' },
-    { icon: 'tabler:logout', lable: 'Log Out', click: () => { router.push({ name: 'welcome' }) }, class: 'text-red-500' },
+    { icon: 'tabler:logout', lable: 'Log Out', click: logoutHandler, class: 'text-red-500' },
 ]
 
 const savedPlanId = localStorage.getItem('selectedPlan');

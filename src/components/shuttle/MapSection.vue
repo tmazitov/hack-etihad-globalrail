@@ -13,8 +13,21 @@
         </div>
     </div>
 
-    <button 
-        class="w-full py-2 rounded-md text-white font-medium transition-opacity bg-blue-500" 
+    <div class="flex border border-gray-200 rounded-lg overflow-hidden">
+        <div class="item p-2 flex-1 text-center font-medium" 
+        v-for="(option, index) in options" 
+        :key="option"
+         @click="selected = index"
+        v-bind:class="{
+            'bg-blue-500 text-white': selected === index,
+            'cursor-pointer hover:bg-gray-200 text-gray-700': selected !== index
+        }">
+            {{ option }}
+        </div>
+    </div>
+    {{ messages[selected] }}
+
+    <button class="w-full py-2 rounded-md text-white font-medium transition-opacity bg-blue-500" 
         :class="{'': location, 'opacity-50 cursor-not-allowed': !location}" 
         :disabled="!location" @click="$emit('onsubmit')">
         Proceed
@@ -29,4 +42,25 @@ import { Icon } from '@iconify/vue';
 const location = ref('');
 const emits = defineEmits(['onsubmit']);
 
+const selected = ref(0);
+
+const options = [
+    'Ride with me',
+    'Take me',
+    'Autonomous'
+]
+
+const messages = [
+    'You will be the driver of the shuttle.',
+    'A driver will take you to your destination.',
+    'The shuttle will drive autonomously.'
+]
 </script>
+
+<style scoped>
+
+.item + .item {
+    border-left: 1px solid #d1d5db; /* Tailwind's gray-300 */
+}
+
+</style>

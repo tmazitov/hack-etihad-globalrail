@@ -1,5 +1,5 @@
 <template>
-    <div class="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white">
+    <div class="rounded-lg overflow-hidden shadow-lg bg-white">
         <div class="">
             <img class="w-full" :src="imagePath" alt="Card image" />
         </div>

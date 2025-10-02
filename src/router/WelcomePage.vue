@@ -12,10 +12,10 @@
             <div class="text-md text-gray-600 mb-6">
                 Your journey begins here.
             </div>
-            <button class="w-full py-2 rounded-lg text-white font-medium transition-opacity bg-blue-500" 
-            @click="moveTo">
-                Start
-            </button> 
+
+            <div class="flex items-center h-16" @click="moveTo">
+                <img src="/pass.png" class="h-full" />
+            </div> 
         </div>
     </PageLayout>
 </template>

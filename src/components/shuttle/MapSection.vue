@@ -47,11 +47,11 @@ const selected = ref(0);
 const options = [
     'Ride with me',
     'Take me',
-    'Autonomous'
+    'Self-driving car'
 ]
 
 const messages = [
-    'You will be the driver of the shuttle.',
+    'You will be the driver of the shuttle. You will receive a 7 AED cashback.',
     'A driver will take you to your destination.',
     'The shuttle will drive autonomously.'
 ]
